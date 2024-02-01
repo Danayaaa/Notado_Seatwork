@@ -39,17 +39,21 @@ function addToCart(event) {
     var removeBtn = document.createElement('button');
     removeBtn.textContent = 'X';
     removeBtn.className = 'remove-button';
+    
     removeBtn.addEventListener('click', function() {
         cartItems.removeChild(listItem);
         total -= productPrice;
         document.getElementById('total').textContent = 'TOTAL: PHP ' + total.toFixed(2);
+    
+        // Decrement the item count
+        itemCount.textContent = parseInt(itemCount.textContent) - 1;
     });
     div.appendChild(removeBtn);
 
     listItem.appendChild(div);
     cartItems.appendChild(listItem);
     total += productPrice;
-    document.getElementById('total').textContent = 'TOTAL: PHP ' + total.toFixed(2);
+    document.getElementById('total').textContent = 'Total: Php ' + total.toFixed(2);
 
     itemCount.textContent = parseInt(itemCount.textContent) + 1;
 
@@ -70,9 +74,9 @@ function addToCart(event) {
     // Animate the temporary element to the cart
     var cartRect = document.querySelector('.fa-shopping-bag').getBoundingClientRect();
     tempElement.style.transition = 'all 0.5s ease-in-out';
-    tempElement.style.top = `${cartRect.top}px`;
-    tempElement.style.left = `${cartRect.left}px`;
-    tempElement.style.transform = 'scale(0.1)';
+    tempElement.style.top = `${window.scrollY + cartRect.top}px`; // Add the vertical scroll position
+    tempElement.style.left = `${window.scrollX + cartRect.left}px`; // Add the horizontal scroll position
+    tempElement.style.transform = 'scale(0.5)';
 
     // Remove the temporary element after the animation
     setTimeout(function() {

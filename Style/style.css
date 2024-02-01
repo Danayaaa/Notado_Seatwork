@@ -28,7 +28,7 @@ header {
     flex-wrap: wrap;
     padding: 20px 10px;
     background-color: 	#cdb3d8;
-    border-bottom: 1px solid #ffffff;
+    border-bottom: 1px solid #9297db;
     width: 100%;
     position: fixed;
     top: 0;
@@ -129,7 +129,7 @@ header nav ul li {
     height: auto; 
     padding: 10px; 
     box-sizing: border-box;
-    border: 1px solid #ccc;
+    border: 1px solid #9297db;
     background-color: #cdb3d8;
     display: flex;
     flex-direction: column;
@@ -247,7 +247,7 @@ header nav ul li {
     width: 15%;
     transition: width 0.5s ease-in-out;
     overflow: visible;
-    border-left: 1px solid #ffffff;
+    border-left: 1px solid #9297db;
 }
 
 h3 {
@@ -281,7 +281,7 @@ h3 {
     display: flex;
     align-items: start;
     flex-direction: row;
-    border-bottom: 1px solid #ffffff;
+    border-bottom: 1px solid #9297db;
     padding: 10px 0;
     position: relative;
     color: #ffffff;

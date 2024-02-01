@@ -28,7 +28,7 @@ header {
     flex-wrap: wrap;
     padding: 20px 10px;
     background-color: 	#cdb3d8;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+    border-bottom: 1px solid #ffffff;
     width: 100%;
     position: fixed;
     top: 0;
@@ -66,22 +66,25 @@ header nav ul li a {
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-family: 'Roboto Condensed', sans-serif;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
     font-size: larger;
-    transition: color 0.3s ease, font-size 0.3s ease;
+    transition: color 0.5s ease, font-size 0.5s ease, background-color 0.5s ease, border 0.5s ease;
+    padding: 10px;
 }
 
 header nav ul li a:hover {
-    color: #a2c8ec; 
-    font-size: 1.5em; 
+    border: 2px solid #9297db;
+    background-color: #9297db; 
+    color: white; 
+    padding: 10px;
 }
+
 .nav-container {
     width: 80%;
 }
 
 header nav ul {
     list-style: none;
-    padding: 10px;
+    padding-right: 50px;
     display: flex;
     justify-content: flex-start;
 }
@@ -162,10 +165,10 @@ header nav ul li {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 10px 20px;
-    border: 3px solid #e3abce;
+    padding: 10px 10px;
+    border: 3px solid #9297db;
     background-color: transparent;
-    color: #e3abce;
+    color: #9297db;
     text-align: center;
     cursor: pointer;
     text-decoration: none;
@@ -175,7 +178,7 @@ header nav ul li {
 }
 
 .add-to-cart:hover {
-    background-color:#e3abce;
+    background-color:#9297db;
     color: white;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
 }
@@ -231,26 +234,27 @@ header nav ul li {
 /* Cart*/
 
 #cart {
-    position: fixed;
-    height: calc(100vh - 80px); 
-    width: 50vw; 
-    max-width: 300px; 
+    position: absolute;
+    height: 150vh;
     padding: 2vw; 
     top: 123px; 
     right:0;
-    background-color:#DEBACE;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    background-color:#cdb3d8;
     overflow-y: auto;
     font-family: 'Roboto Condensed', sans-serif;
     transition: width 0.5s ease-in-out, right 0.5s ease-in-out;
     display: block;
+    width: 15%;
+    transition: width 0.5s ease-in-out;
+    overflow: visible;
+    border-left: 1px solid #ffffff;
 }
 
 h3 {
     letter-spacing: 2px; 
     color: #ffffff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
-    font-family: 'Lobster', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 .fas.fa-shopping-bag {
@@ -262,13 +266,6 @@ h3 {
     transition: width 0.5s ease-in-out;
 }
 
-#cart {
-    width: 15%;
-    transition: width 0.5s ease-in-out;
-    height: auto;
-    overflow: visible;
-}
-
 #cart li {
     list-style-type: none;
     text-align: left;
@@ -276,7 +273,7 @@ h3 {
 
 #cart-items {
     padding-left: 0;
-    height: 400px; 
+    height: 110vh; 
     overflow-y: auto; 
 }
 
@@ -291,7 +288,7 @@ h3 {
     text-transform: uppercase;
     font-size: 13px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    font-size: 0.8em; /* Adjust this to make the text smaller */
+    font-size: 0.8em; 
     padding: 5px 0; 
     margin-top: 10px;
 }
@@ -361,7 +358,7 @@ h3 {
 
 .checkout:hover {
     background-color: #ffffff; 
-    color:  #f9b0c3;
+    color:  #cdb3d8;
 }
 
 .checkout:active {

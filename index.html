@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="./Style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header>
+        <h1>
+            <img src="../Pics/logo-removebg-preview.png" class="logo">
+            <span class="cosmic-finds">Cosmic Finds</span>
+        </h1>
+
+        <div class="nav-container">
+            <nav>
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#products">PRODUCTS</a></li>
+                    <li><a href="#location">LOCATION</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+    </header>
+
+    <div id="products">
+
+        <h4>Showing 1-8 of 48 results</h4>
+
+        <div class="products-row"> 
+
+        <div class="product1">
+            <div class="hover-background"></div>
+            <img src="./Pics/makeup1.webp" alt="Product 1">
+            <span class="product-name">Bronze and Highlighter Set</span>
+            <span class="product-price" data-price="549.75">Php 549.75</span>
+            <div class="add-to-cart">ADD TO CART</div>
+        </div>
+        <div class="product2">
+            <div class="hover-background"></div>
+            <img src="./Pics/makeup2.webp" alt="Product 2">
+            <span class="product-name">Show By Pastel</span>
+            <span class="product-price" data-price="425.00">Php 425.00</span>
+            <div class="add-to-cart">ADD TO CART</div>
+        </div>
+
+        <div class="product3">
+            <div class="hover-background"></div>
+            <img src="./Pics/makeup3.webp" alt="Product 3">
+            <span class="product-name">Glassy Glow Skin Serum</span>
+            <span class="product-price" data-price="569.75">Php 569.75</span>
+            <div class="add-to-cart">ADD TO CART</div>
+        </div>
+
+        <div class="product4">
+            <div class="hover-background"></div>
+            <img src="./Pics/makeup4.webp" alt="Product 4">
+            <span class="product-name">Stardust Highlighter</span>
+            <span class="product-price" data-price="300.00">Php 300.00</span>
+            <div class="add-to-cart">ADD TO CART</div>
+        </div>
+
+        </div>
+
+        <div class="products-row1"> 
+
+            <div class="product5">
+                <div class="hover-background"></div>
+                <img src="./Pics/makeup5.webp" alt="Product 5">
+                <span class="product-name">Show Your Joy Liquid Blush</span>
+                <span class="product-price" data-price="467.00">Php 467.00</span>
+                <div class="add-to-cart">ADD TO CART</div>
+            </div>
+            <div class="product6">
+                <div class="hover-background"></div>
+                <img src="./Pics/makeup6.webp" alt="Product 6">
+                <span class="product-name">Liquid Bronzer</span>
+                <span class="product-price" data-price="259.75">Php259.75</span>
+                <div class="add-to-cart">ADD TO CART</div>
+            </div>
+    
+            <div class="product7">
+                <div class="hover-background"></div>
+                <img src="./Pics/makeup7.webp" alt="Product 7">
+                <span class="product-name">Duo Blush Set</span>
+                <span class="product-price" data-price="650.00">Php 650.00</span>
+                <div class="add-to-cart">ADD TO CART</div>
+            </div>
+
+            <div class="product8">
+                <div class="hover-background"></div>
+                <img src="./Pics/makeup8.webp" alt="Product 8">
+                <span class="product-name">Daylight Cream Highlighter</span>
+                <span class="product-price" data-price="249.75">Php 249.75</span>
+                <div class="add-to-cart">ADD TO CART</div>
+            </div>
+    
+            </div>
+
+    </div>
+
+    <div id="cart">
+        <h3> Your Cart <i class="fas fa-shopping-bag"></i> <span id="item-count">0</span> </h2>
+        <ul id="cart-items" class="cart-container"></ul>
+        <div id="total">TOTAL: PHP 0</div>
+        <div class="checkout">CHECKOUT</div>
+    </div>
+
+    <div id="checkout-modal" class="modal">
+        <div class="modal-content">
+            <p>Thank you for shopping with us!</p>
+            <button id="continue-shopping">Continue Shopping</button>
+        </div>
+    </div>
+
+
+    <script src="./JS/script.js"></script>
+</body>
+</html> 

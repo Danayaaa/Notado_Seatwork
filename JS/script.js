@@ -36,6 +36,8 @@ function addToCart(event) {
     
     div.appendChild(namePriceDiv); 
 
+    //Remove Button
+
     var removeBtn = document.createElement('button');
     removeBtn.textContent = 'X';
     removeBtn.className = 'remove-button';
@@ -45,7 +47,6 @@ function addToCart(event) {
         total -= productPrice;
         document.getElementById('total').textContent = 'TOTAL: PHP ' + total.toFixed(2);
     
-        // Decrement the item count
         itemCount.textContent = parseInt(itemCount.textContent) - 1;
     });
     div.appendChild(removeBtn);
@@ -57,7 +58,8 @@ function addToCart(event) {
 
     itemCount.textContent = parseInt(itemCount.textContent) + 1;
 
-    // Create a temporary element for the animation
+    /*Add to cart animation*/
+
     var tempElement = document.createElement('div');
     tempElement.className = 'temp-element';
     tempElement.style.backgroundImage = `url(${productImage})`;
@@ -74,8 +76,8 @@ function addToCart(event) {
     // Animate the temporary element to the cart
     var cartRect = document.querySelector('.fa-shopping-bag').getBoundingClientRect();
     tempElement.style.transition = 'all 0.5s ease-in-out';
-    tempElement.style.top = `${window.scrollY + cartRect.top}px`; // Add the vertical scroll position
-    tempElement.style.left = `${window.scrollX + cartRect.left}px`; // Add the horizontal scroll position
+    tempElement.style.top = `${window.scrollY + cartRect.top}px`; 
+    tempElement.style.left = `${window.scrollX + cartRect.left}px`; 
     tempElement.style.transform = 'scale(0.5)';
 
     // Remove the temporary element after the animation
@@ -85,22 +87,23 @@ function addToCart(event) {
 
 }
 
+//Checkout Button
 
 var checkoutButton = document.querySelector('.checkout');
 
 checkoutButton.addEventListener('click', function() {
-    // Get the cart items element
     var cartItems = document.getElementById('cart-items');
 
-    // Remove all child elements
     while (cartItems.firstChild) {
         cartItems.removeChild(cartItems.firstChild);
     }
     total = 0;
-    document.getElementById('total').textContent = 'TOTAL: PHP ' + total.toFixed(2);
+    document.getElementById('total').textContent = 'Total: Php ' + total.toFixed(2);
 
     itemCount.textContent = '0';
 });
+
+//Thank you for shopping with us!
 
 var checkoutDiv = document.querySelector('.checkout');
 var modal = document.getElementById('checkout-modal');

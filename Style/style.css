@@ -85,12 +85,6 @@ header nav ul li {
 
 /* icons*/
 
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .social-icons {
     display: flex;
 }
